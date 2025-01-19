@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CoctelesApiPO.MainPage">
+
+    <StackLayout>
+        <Label Text="Cocktails" 
+               HorizontalOptions="Center" 
+               FontSize="24" />
+
+        <ListView x:Name="cocktailListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Image Source="{Binding StrDrinkThumb}" 
+                                   HeightRequest="100" 
+                                   WidthRequest="100"/>
+                            <Label Text="{Binding StrDrink}" />
+                            <Label Text="{Binding StrInstructions}" 
+                                   LineBreakMode="WordWrap" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
